@@ -18,7 +18,7 @@ class Classificador():
         '''
         data = np.array([[sepal_length, sepal_width, 
                           petal_length, petal_width]])
-
+        
         prediction = self.model.predict(data)
 
         return prediction[0]

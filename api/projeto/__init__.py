@@ -19,16 +19,8 @@ from fastapi.exceptions import RequestValidationError
 from projeto.settings import PATH_LOG
 from projeto.resources import resources, database
 
-"""
-logging_conf_path = os.path.normpath(os.path.join(os.path.dirname(__file__), '../logging.conf'))
-logging.config.fileConfig(logging_conf_path)
-log = logging.getLogger(__name__)
-logger.add(settings.PATH_LOG, rotation="1 week")
-"""
 urllib3.disable_warnings()
-
 logger.add("iris_model.log", rotation="500 MB")
-
 logger.level("REQUEST RECEBIDA", no=38, color="<yellow>")
 logger.level("REQUEST FINALIZADA", no=39, color="<green>")
 
