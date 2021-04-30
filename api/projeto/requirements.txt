@@ -1,0 +1,14 @@
+pydantic==1.6.1
+fastapi==0.60.1
+uvloop==0.14.0
+uvicorn==0.10.3
+gunicorn==19.9.0
+requests==2.22.0
+werkzeug==0.16.0
+loguru==0.4.1
+numpy==1.18.4
+Pillow==7.1.2
+scikit-learn
+pandas==0.24.2
+pickle5
+pymongo==3.10.1

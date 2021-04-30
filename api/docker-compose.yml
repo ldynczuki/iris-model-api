@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  projeto:
+    image: api-iris
+    build:
+      context: projeto
+      dockerfile: Dockerfile
+    expose: 
+      - "5000"
+    volumes:
+      - ./api-iris/:/code/api-iris
+    ports:
+      - 5000:5000
+    networks:
+      - backend
+  
+  mongo:
+    image: mongo
+    user: root
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+
+networks:
+  backend:
+    driver: bridge
